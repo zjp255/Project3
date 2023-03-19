@@ -1,0 +1,24 @@
+﻿  源.cpp
+E:\code\Project3\suanfashiyan\源.cpp(128,18): warning C4244: “参数”: 从“size_t”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+E:\code\Project3\suanfashiyan\源.cpp(80,24): warning C4018: “<”: 有符号/无符号不匹配
+E:\code\Project3\suanfashiyan\源.cpp(79): message : 在编译 类 模板 成员函数“T SqList<T>::LocateElem(T)”时
+          with
+          [
+              T=float
+          ]
+E:\code\Project3\suanfashiyan\源.cpp(147): message : 查看对正在编译的函数 模板 实例化“T SqList<T>::LocateElem(T)”的引用
+          with
+          [
+              T=float
+          ]
+E:\code\Project3\suanfashiyan\源.cpp(115): message : 查看对正在编译的 类 模板 实例化“SqList<float>”的引用
+E:\code\Project3\suanfashiyan\源.cpp(83,12): warning C4244: “return”: 从“size_t”转换到“T”，可能丢失数据
+          with
+          [
+              T=float
+          ]
+  suanfashiyan.vcxproj -> E:\code\Project3\Debug\suanfashiyan.exe
