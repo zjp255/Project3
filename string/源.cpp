@@ -99,15 +99,52 @@ public:
 		}
 	}
 
-	void get_next(MyString &str,int next[])
+	void get_next(MyString &str,int* next)
 	{
 		int i = 1, j = 0;
 		next[1] = 0;
 		while (i < str.length)
 		{
-
+			if (j == 0 || str.ch[i] == str.ch[j])
+			{
+				i++;
+				j++;
+				next[i] = j;
+			}
+			else
+			{
+				j = next[j];
+			}
 		}
 
+	}
+
+	int indexKmp(MyString& str)
+	{
+		int i = 1, j = 1;
+		int* next = new int[str.length + 1]();
+		get_next(str, next);
+		while (i <= length && j <= str.length)
+		{
+			if (ch[i] == str.ch[j] || j == 0)
+			{
+				i++;
+				j++;
+			}
+			else
+			{
+				j = next[j];
+			}
+		}
+		if (j > str.length)
+		{
+			return i - str.length;
+		}
+		else
+		{
+			return 0;
+		}
+	
 	}
 
 	void printString()
@@ -143,14 +180,14 @@ MyString::~MyString()
 
 int main()
 {
-	MyString str1 = MyString("my phone is redmik40");
-	MyString str2 = MyString("k40");
+	MyString str1 = MyString("dfaklhkljahevklhernithneruiwvthmupqhgt4qui4vmrtyq8mtviuqe8qv");
+	MyString str2 = MyString("uiw");
 
 	//str1.SubString(str2, 5, 5);
 	//str2.printString();
 
 	//cout<<str1.StrCompare(str1, str2);
 	
-	cout << str1.index(str2);
+	cout << str1.indexKmp(str2);
 	return 0;
 }

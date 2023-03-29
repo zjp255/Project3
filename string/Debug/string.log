@@ -2,5 +2,5 @@
 E:\code\Project3\string\源.cpp(19,26): warning C4018: “<=”: 有符号/无符号不匹配
 E:\code\Project3\string\源.cpp(29,24): warning C4018: “<=”: 有符号/无符号不匹配
 E:\code\Project3\string\源.cpp(29,44): warning C4018: “<=”: 有符号/无符号不匹配
-E:\code\Project3\string\源.cpp(104,24): warning C4018: “<=”: 有符号/无符号不匹配
+E:\code\Project3\string\源.cpp(152,24): warning C4018: “<=”: 有符号/无符号不匹配
   string.vcxproj -> E:\code\Project3\Debug\string.exe
