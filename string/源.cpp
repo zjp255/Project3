@@ -38,6 +38,78 @@ public:
 		return str1.length - str2.length;
 	}
 
+	/*int index(MyString &str)
+	{
+		if (str.length > length)
+			return 0;
+		int count = 1;
+		rsize_t i = 0;
+		while (count <= length - str.length + 1)
+		{
+			for ( i = 1; i <= str.length; i++)
+			{
+				if (ch[count + i - 1] != str.ch[i])
+				{
+					break;
+				}
+			}
+			if (i > str.length)
+			{
+				break;
+			}
+			else
+			{
+				count++;
+			}	
+		}
+		if (i > str.length)
+		{
+			return count;
+		}
+		return 0;
+
+	}*/
+
+	int index(MyString& str)
+	{
+		int k = 1;
+		int i = k;
+		int j = 1;
+		while (i <= length && j <= str.length )
+		{
+			if (ch[i] == str.ch[j])
+			{
+				i++;
+				j++;
+			}
+			else
+			{
+				k++;
+				i = k;
+				j = 1;
+			}
+		}
+		if (j > str.length)
+		{
+			return k;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+
+	void get_next(MyString &str,int next[])
+	{
+		int i = 1, j = 0;
+		next[1] = 0;
+		while (i < str.length)
+		{
+
+		}
+
+	}
+
 	void printString()
 	{
 		for (size_t i = 1; i <= length; i++)
@@ -72,12 +144,13 @@ MyString::~MyString()
 int main()
 {
 	MyString str1 = MyString("my phone is redmik40");
-	MyString str2 = MyString("");
+	MyString str2 = MyString("k40");
 
-	str1.SubString(str2, 5, 5);
-	str2.printString();
+	//str1.SubString(str2, 5, 5);
+	//str2.printString();
 
-	cout<<str1.StrCompare(str1, str2);
+	//cout<<str1.StrCompare(str1, str2);
 	
+	cout << str1.index(str2);
 	return 0;
 }
