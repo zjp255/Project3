@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BSTree", "BSTree\BSTree.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BBTree", "BBTree\BBTree.vcxproj", "{3B5CC048-AB56-4469-9C52-93476092B052}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HFTree", "HFTree\HFTree.vcxproj", "{6C89FF50-8994-431A-844C-117C42B128CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{3B5CC048-AB56-4469-9C52-93476092B052}.Release|x64.Build.0 = Release|x64
 		{3B5CC048-AB56-4469-9C52-93476092B052}.Release|x86.ActiveCfg = Release|Win32
 		{3B5CC048-AB56-4469-9C52-93476092B052}.Release|x86.Build.0 = Release|Win32
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Debug|x64.ActiveCfg = Debug|x64
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Debug|x64.Build.0 = Debug|x64
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Debug|x86.ActiveCfg = Debug|Win32
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Debug|x86.Build.0 = Debug|Win32
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Release|x64.ActiveCfg = Release|x64
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Release|x64.Build.0 = Release|x64
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Release|x86.ActiveCfg = Release|Win32
+		{6C89FF50-8994-431A-844C-117C42B128CA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

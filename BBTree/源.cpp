@@ -35,8 +35,6 @@ public:
 						if (temp->lchild == NULL)
 						{
 							insertNode(temp->lchild, e[i]);
-							countBalance();
-							balanceTree();
 							break;
 						}
 						temp = temp->lchild;
@@ -46,12 +44,12 @@ public:
 						if (temp->rchild == NULL)
 						{
 							insertNode(temp->rchild, e[i]);
-							countBalance();
-							balanceTree();
 							break;
 						}
 						temp = temp->rchild;
 					}
+					countBalance();
+					balanceTree();
 				}
 
 			}
@@ -191,6 +189,7 @@ private:
 	{
 		if (node != NULL)
 		{
+			
 			InOrderBalance(node->lchild);
 			balanceTree(node);
 			InOrderBalance(node->rchild);
@@ -213,11 +212,6 @@ private:
 					rrChange(node);
 					countBalance();
 				}
-				/*else
-				{
-					rrChange(node);
-					countBalance();
-				}*/
 			}
 			else if (right != NULL && node->rchild->balance == -1)
 			{
@@ -237,11 +231,6 @@ private:
 					llChange(node);
 					countBalance();
 				}
-				/*else
-				{
-					llChange(node);
-					countBalance();
-				}*/
 			}
 			
 			else if (left != NULL && node->lchild->balance == 1)
@@ -346,6 +335,8 @@ private:
 		int key = node->key;
 		node->key = temp1->key;
 		temp1->key = key;
+
+
 	}
 
 	void rrChange(BSTNode*& node)
@@ -390,6 +381,7 @@ int main()
 	int e[10] = { 20,30,50,80,10,5,1,60,70,2 };
 	int n = sizeof(e) / sizeof(e[0]);
 	bst->creatTree(e, n);
+	bst->countBalance();
 	bst->InOrder();
 	cout << "" << endl;
 	cout << bst->BST_Search(50)->key << endl;
