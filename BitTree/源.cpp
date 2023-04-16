@@ -236,7 +236,6 @@ BitTree<T>::~BitTree()
 int main()
 {
 	BitTree<int> *bitTree = new BitTree<int>();
-	
 	for (int i = 1; i <= 9; i++)
 	{
 		bitTree->add(i);
